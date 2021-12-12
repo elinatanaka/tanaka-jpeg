@@ -310,11 +310,16 @@ p {
     font-weight: 300
 }
 
+.work {
+  color: #427532;
+}
+
 
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 a {
     color: #1EAEDB;
+    text-decoration: none;
 }
 
 a:hover {
