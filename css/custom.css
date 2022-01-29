@@ -159,12 +159,17 @@
     width: 80%;
   }
 }
-img {
+#fullsize {
   width: -moz-available;
+}
+
+img #happysize {
+  width: 20rem !important;
 }
 /* portfolio */
 #soft {
   border-radius: 10px;
+  width: -moz-available;
 }
 
 /* image hover */
