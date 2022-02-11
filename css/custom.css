@@ -1,8 +1,11 @@
+@import url(fonts.css);
+
 /* TABLE OF CONTENTS
 
 - NAVIGATION BAR
 - FOOTER
 - portfolio
+- image sizing
 - IMAGE HOVER
 
 */
@@ -21,10 +24,10 @@
     display: block;
     width: 100%;
     height: 6.5rem;
-    background: #F2DCDA;
+    background: #D6A39A;
     z-index: 99;
-    border-top: 1px solid #F26457;
-    border-bottom: 1px solid #F26457;
+    border-top: 1px solid #8A635C;
+    border-bottom: 1px solid #8A635C;
     position: fixed;
   }
 
@@ -60,11 +63,11 @@
     margin-right: 35px;
     text-decoration: none;
     line-height: 6.5rem;
-    color: #F26457;
+    color: #8A635C;
   }
 
   .navbar-link.active {
-    color: #F26457;
+    color: #523E5B;
   }
 
   .has-docked-nav .navbar {
@@ -134,14 +137,14 @@
     letter-spacing: .2rem;
     text-decoration: none;
     line-height: 6.5rem;
-    color: #F26457;
+    color: #8A635C;
     margin-top: 0px;
     margin-bottom: 0px;
     margin-left: 1rem;
   }
 
   .navbar-link.active {
-    color: #F26457;
+    color: #8A635C;
   }
 
   .has-docked-nav .navbar {
@@ -159,6 +162,8 @@
     width: 80%;
   }
 }
+
+/* image sizing */
 #fullsize {
   width: -moz-available;
 }
@@ -170,6 +175,10 @@ img #happysize {
 #soft {
   border-radius: 10px;
   width: -moz-available;
+}
+
+#workcolor {
+  color: #523E5B;
 }
 
 /* image hover */

@@ -1,0 +1,15 @@
+@font-face {
+    font-family: "Le Murmure";
+    src: url('../fonts/Le_Murmure-Regular_web.woff2') format('woff2'),
+        url('../fonts/Le_Murmure-Regular_web.woff') format('woff');
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Butler Stencil';
+    src: url('../fonts/ButlerStencil-Black.woff2') format('woff2'),
+        url('../fonts/ButlerStencil-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
