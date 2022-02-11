@@ -1,3 +1,5 @@
+@import url(fonts.css);
+
 /*
 * Skeleton V2.0.4
 * Copyright 2014, Dave Gamache
@@ -220,7 +222,7 @@ body {
     line-height: 1.6;
     font-weight: 400;
     font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", 'Be Vietnam', Helvetica, Arial, sans-serif, 'Fraunces', serif;
-    color: #427532;
+    color: #376038;
 }
 
 
@@ -234,7 +236,6 @@ h5,
 h6 {
     margin-top: 0;
     margin-bottom: 2rem;
-    font-weight: 300;
 }
 
 h1 {
@@ -250,19 +251,19 @@ h2 {
 }
 
 h3 {
-    font-size: 3.0rem;
+    font-size: 6rem;
     line-height: 1.3;
-    letter-spacing: -.1rem;
-    font-family: 'Fraunces', serif;
-    font-weight: 700
+    letter-spacing: 0;
+    font-family: "Butler Stencil", serif;
+    text-transform: uppercase;
 }
 
 h4 {
-    font-size: 2.4rem;
+    font-size: 3.8em;
     line-height: 1.35;
     letter-spacing: 0;
-    font-family: 'Be Vietnam', serif;
-    font-weight: 600
+    font-family: 'Le Murmure', serif;
+    font-weight: 500;
 }
 
 h5 {
@@ -277,41 +278,10 @@ h6 {
     letter-spacing: 0;
 }
 
-/* Larger than phablet */
-@media (min-width: 550px) {
-    h1 {
-        font-size: 5.0rem;
-    }
-
-    h2 {
-        font-size: 4.2rem;
-    }
-
-    h3 {
-        font-size: 3.6rem;
-    }
-
-    h4 {
-        font-size: 3.0rem;
-    }
-
-    h5 {
-        font-size: 2.4rem;
-    }
-
-    h6 {
-        font-size: 1.5rem;
-    }
-}
-
-p {
-    margin-top: 0;
-    font-family: 'Be Vietnam', sans-serif;
-    font-weight: 300
-}
-
 .work {
-  color: #427532;
+  color: #523E5B;
+  font-weight: 500;
+  text-transform: uppercase;
 }
 
 
@@ -323,7 +293,7 @@ a {
 }
 
 a:hover {
-    color: #F26457;
+    color: #523E5B;
 }
 
 
@@ -374,9 +344,8 @@ button.button-primary,
 input[type="submit"].button-primary,
 input[type="reset"].button-primary,
 input[type="button"].button-primary {
-    color: #FFF;
-    background-color: #B2D9A7;
-    border-color: #B2D9A7;
+    color: #376038;
+    border-color: #376038;
     font-family: 'Be Vietnam', sans-serif;
 }
 
@@ -390,9 +359,9 @@ button.button-primary:focus,
 input[type="submit"].button-primary:focus,
 input[type="reset"].button-primary:focus,
 input[type="button"].button-primary:focus {
-    color: #FFF;
-    background-color: #93C284;
-    border-color: #93C284;
+    color: #376038;
+    background-color: #427532;
+    border-color: #376038;
 }
 
 
