@@ -14,6 +14,12 @@
 @media (min-width: 750px) {
 
   /* Navbar */
+
+  .navbar {
+    margin-left: -1em;
+    padding-left: 2em;
+  }
+
   .navbar+.docs-section {
     border-top-width: 0;
     position: fixed;
@@ -22,7 +28,7 @@
   .navbar,
   .navbar-spacer {
     display: block;
-    width: 100%;
+    width: 101%;
     height: 6.5rem;
     background: #D6A39A;
     z-index: 99;
