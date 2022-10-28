@@ -13,3 +13,34 @@
     font-weight: 900;
     font-style: normal;
 }
+
+@font-face {
+    font-family: 'blocusregular';
+    src: url('../fonts/blocuswebfont.eot');
+    src: url('../fonts/blocuswebfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/blocuswebfont.woff') format('woff'),
+         url('../fonts/blocuswebfont.ttf') format('truetype'),
+         url('../fonts/blocuswebfont.svg#blocusregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'leikoregular';
+    src: url('../fonts/leiko-regular-webfont.woff2') format('woff2'),
+         url('../fonts/leiko-regular-webfont.woff') format('woff'),
+         url('../fonts/Leiko-Regular.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'mondwestregular';
+    src: url('../fonts/mondwest-regular-webfont.woff2') format('woff2'),
+         url('../fonts/mondwest-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
