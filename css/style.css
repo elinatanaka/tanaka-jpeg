@@ -2,7 +2,7 @@
 
 :root {
     --font-body-family: "mondwestregular";
-    --font-heading-family: "blocusregular", "leikoregular", 'Modern No. 20', Georgia, 'Times New Roman', Times, serif;
+    --font-heading-family: 'Modern No. 20', "leikoregular", "blocusregular", Georgia, 'Times New Roman', Times, serif;
     --color-background: #3D4946;
     --color-accent-1: #B9B26F;
     --color-accent-2: #C9CCD4;
@@ -110,7 +110,8 @@ ul.work.row li {
 @media screen and (max-width: 520px) {
     ul.work.row {
         grid-template-columns: auto;
-}
+    }
+
     nav ul {
         padding-left: 0;
     }
@@ -127,8 +128,8 @@ nav ul {
     padding-bottom: 1em;
 }
 
-.shop h1:nth-of-type(1) {
-    margin: 2rem;
+.pagedetails {
+    margin: 1em;
 }
 
 .product-grid {
@@ -175,4 +176,18 @@ nav ul {
 
 #ProductIframePage-react-component-6994e5d4-91ce-4ef3-9df0-beb2fc7c9b29 main {
     max-width: 50%;
+}
+
+@media screen and (max-width: 669px) {
+    .shop .product {
+        min-width: 100px;
+        max-width: 100%;
+    }
+}
+
+/* painting page */
+.product summary {
+    font-family: var(--font-heading-family);
+    font-size: 2em;
+    padding: 1rem;
 }
