@@ -1,2 +1,2 @@
 # tanaka-jpeg
-portfolio site
+this is the portfolio & shop landing page for Elina Tanaka, California creative
