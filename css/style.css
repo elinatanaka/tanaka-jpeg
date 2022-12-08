@@ -75,10 +75,6 @@ ul.home-nav {
 }
 
 ul.work.row {
-    display: grid;
-    grid-template-columns: auto auto;
-    gap: 10px;
-    padding: 10px;
     list-style: none;
 }
 
@@ -94,15 +90,16 @@ b.work {
 .hover_img a:hover span {
     display: block;
     position: absolute;
+    transform: translateY(-120%);
 }
 
-ul.work.row li {
+ul.work.row li.type {
     max-width: 40em;
+display: inline-block;
+margin: 1rem;
 }
 
 .workpage footer {
-    position: absolute;
-    bottom: 0;
     padding: 1rem;
     text-transform: uppercase;
 }
@@ -150,13 +147,65 @@ nav ul {
     border: 1px solid var(--color-accent-1);
 }
 
+.product img:hover {
+    transform: rotate(4deg);
+}
+
 .product .product_title {
     font-size: 1.4em;
     padding: 1rem;
     text-align: center;
 }
 
-.product .cart-button {
+/* filtering */
+.filter {
+    display: flex;
+}
+.filter button {
+    font-family: var(--font-body-family);
+    text-transform: uppercase;
+    background: none;
+    color: var(--color-accent-1);
+    border: 1px dashed var(--color-accent-1);
+    width: 100%;
+    margin: 0;
+    padding: .4rem 0;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+/* filter styling */
+.filterDiv {
+    display: none;
+}
+
+.show {
+    display: inline-flex;
+}
+
+.filter button:hover {
+    background-color: var(--color-dark-contrast);
+}
+
+/* 
+filter marquee effect */
+.horanim {
+    transition: 1s ease;
+}
+.filter button:hover .horanim {
+    -moz-transform: translateX(5%);
+    -webkit-transform: translateX(5%);
+    transform: translateX(5%);
+    -moz-animation: back-and-forth 2s linear both infinite alternate;
+    -webkit-animation: back-and-forth 2s linear both infinite alternate;
+    animation: back-and-forth 2s linear both infinite alternate;
+}
+@-moz-keyframes back-and-forth {
+    from{transform: translateX(-5%)}
+    to{transform: translateX(5%)}
+}
+
+.product.cart-button p {
     width: fit-content;
     align-self: center;
     display: inline-flex;
@@ -167,7 +216,12 @@ nav ul {
     font-family: var(--font-body-family);
 }
 
-.product a.cart-button:hover {
+a.product .product_title:hover,
+.product a:hover, a.product:hover span {
+    color: var(--color-accent-1) !important;
+}
+
+.product.cart-button:hover p {
     color: var(--color-background);
     background-color: var(--color-accent-1);
     transform: translate(-.25rem, -.25rem);
