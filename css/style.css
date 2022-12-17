@@ -1,13 +1,22 @@
 @import url(fonts.css);
 
 :root {
-    --font-body-family: "mondwestregular";
+    --font-body-family: "mondwestregular", mono;
+    --font-body-plain-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     --font-heading-family: 'Modern No. 20', "leikoregular", "blocusregular", Georgia, 'Times New Roman', Times, serif;
     --color-background: #3D4946;
     --color-accent-1: #B9B26F;
     --color-accent-2: #C9CCD4;
     --color-accent-3: #F2EEEA;
-    --color-dark-contrast: #1E2125;
+    --color-set-a-1: #849D9B;
+    --color-set-a-2: #1E2125;
+    --color-set-a-3: #D642EE;
+    --color-set-b-1: #556169;
+    --color-set-b-2: #B9B26F;
+    --color-set-b-3: #EDFD34;
+    --color-set-c-1: #FCF5D9;
+    --color-set-c-2: #364EA0;
+    --color-set-c-3: #4AA8FF;
 }
 
 body {
@@ -65,10 +74,19 @@ ul.home-nav {
 /* workpage */
 .workpage {
     margin: 0;
+    color: var(--color-set-c-1);
+}
+
+.workpage p,
+.workpage a {
+    color: var(--color-set-c-1);
+}
+
+.workpage a:hover {
+    color: var(--color-set-c-3);
 }
 
 .workpage h2 {
-    border-bottom: 3px double var(--color-accent-1);
     text-transform: uppercase;
     font-size: 3rem;
     padding-left: 10px;
@@ -95,8 +113,8 @@ b.work {
 
 ul.work.row li.type {
     max-width: 40em;
-display: inline-block;
-margin: 1rem;
+    display: inline-block;
+    margin: 1rem;
 }
 
 .workpage footer {
@@ -121,7 +139,7 @@ nav ul {
     justify-content: space-around;
     list-style: none;
     text-transform: uppercase;
-    border-bottom: 1px solid var(--color-accent-1);
+    border-bottom: 1px solid;
     padding-bottom: 1em;
 }
 
@@ -161,6 +179,7 @@ nav ul {
 .filter {
     display: flex;
 }
+
 .filter button {
     font-family: var(--font-body-family);
     text-transform: uppercase;
@@ -184,7 +203,7 @@ nav ul {
 }
 
 .filter button:hover {
-    background-color: var(--color-dark-contrast);
+    background-color: var(--color-set-b-1);
 }
 
 /* 
@@ -192,6 +211,7 @@ filter marquee effect */
 .horanim {
     transition: 1s ease;
 }
+
 .filter button:hover .horanim {
     -moz-transform: translateX(5%);
     -webkit-transform: translateX(5%);
@@ -200,9 +220,25 @@ filter marquee effect */
     -webkit-animation: back-and-forth 2s linear both infinite alternate;
     animation: back-and-forth 2s linear both infinite alternate;
 }
+
 @-moz-keyframes back-and-forth {
-    from{transform: translateX(-5%)}
-    to{transform: translateX(5%)}
+    from {
+        transform: translateX(-5%)
+    }
+
+    to {
+        transform: translateX(5%)
+    }
+}
+
+@keyframes back-and-forth {
+    from {
+        transform: translateX(-5%)
+    }
+
+    to {
+        transform: translateX(5%)
+    }
 }
 
 .product.cart-button p {
@@ -217,19 +253,39 @@ filter marquee effect */
 }
 
 a.product .product_title:hover,
-.product a:hover, a.product:hover span {
+.product a:hover,
+a.product:hover span {
     color: var(--color-accent-1) !important;
+}
+
+.soldout.product.cart-button:hover p {
+    color: var(--color-accent-2);
+    text-decoration: line-through;
+    background-color: var(--color-background);
+    border: 1px solid var(--color-accent-2);
+    box-shadow: .25rem .25rem var(--color-set-b-1);
 }
 
 .product.cart-button:hover p {
     color: var(--color-background);
     background-color: var(--color-accent-1);
     transform: translate(-.25rem, -.25rem);
-    box-shadow: .25rem .25rem var(--color-dark-contrast);
+    box-shadow: .25rem .25rem var(--color-set-a-2);
 }
 
 #ProductIframePage-react-component-6994e5d4-91ce-4ef3-9df0-beb2fc7c9b29 main {
     max-width: 50%;
+}
+
+footer.shop span, footer.shop a {
+    font-size: .7rem;
+text-transform: uppercase;
+letter-spacing: 0.088em;
+color: var(--color-set-a-1);
+}
+
+footer.shop a:hover {
+    color: var(--color-accent-2);
 }
 
 @media screen and (max-width: 669px) {

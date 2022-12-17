@@ -9,7 +9,8 @@
     <meta name="title" content="Shop for e Tanaka">
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="preload" as="style" onload="this.rel = 'stylesheet'" href='css/style.css'>
-    <meta name="description" content="Shop page for e Tanaka's stationary, stickers, & prints">
+    <meta name="description"
+        content="Shop page for e Tanaka's stationary, stickers, small paintings & prints. All stickers are made from recyclable or compostable materials unless stated otherwise.">
     <meta property="og:title" content="eTanaka's portfolio">
     <meta property="og:image" content="images/portfolio/paint_mountain.jpg">
     <meta property="twitter:title" content="e Tanaka">
@@ -28,15 +29,24 @@
             <li><a href="index.html">home</a></li>
             <li><a href="painting.html">paintings</a></li>
             <li><a href="listedwork.html">listed work</a></li>
+            <li><a href="mailto:tanaka.jpeg@gmail.com">contact</a></li>
         </ul>
     </nav>
     <div class="pagedetails">
         <h1>Prints & Stationary</h1>
         <div class="filter" id="myBtnContainer">
-                <button class="btn active" onclick="filterSelection('all')"><div class="horanim">Show all</div></button>
-                <button class="btn" onclick="filterSelection('prints')"><div class="horanim">Illustration Prints</div></button>
-            <button class="btn" onclick="filterSelection('paintings')"><div class="horanim">Paintings</div></button>
-            <button class="btn" onclick="filterSelection('stationary')"><div class="horanim">Stationary</div></button>
+            <button class="btn active" onclick="filterSelection('all')">
+                <div class="horanim">Show all</div>
+            </button>
+            <button class="btn" onclick="filterSelection('prints')">
+                <div class="horanim">Illustration Prints</div>
+            </button>
+            <button class="btn" onclick="filterSelection('paintings')">
+                <div class="horanim">Paintings</div>
+            </button>
+            <button class="btn" onclick="filterSelection('stationary')">
+                <div class="horanim">Stationary</div>
+            </button>
         </div>
     </div>
     <div class="product-grid">
@@ -44,58 +54,53 @@
             alt="femme floral stickers">
             <img src="images/shop/sticker_flowers.jpg">
             <span class="product_title">Recyclable Stickers</span>
-            <p>add to
-                cart</p>
+            <p>add to cart</p>
         </a>
-        <a class="product cart-button filterDiv paintings" href="https://tanakajpeg.gumroad.com/l/happymushrooms"
-        alt="happy mushroom painting">
-        <img src="images/shop/paint_mushroom_2.jpg">
-        <span class="product_title">Painted Mushrooms</span>
-        <p>add to
-            cart</p>
-    </a>
-        <a class="product cart-button filterDiv stationary" href="https://tanakajpeg.gumroad.com/l/washibun" alt="bunny washi tape">
+        <a class="product cart-button filterDiv stationary" href="https://tanakajpeg.gumroad.com/l/washibun"
+            alt="bunny washi tape">
             <img src="images/shop/bun_thumb.jpg">
             <span class="product_title">Bunny Washi Tape</span>
-            <p>
-                add to
-                cart
+            <p>add to cart
             </p>
         </a>
-        <a class="product cart-button filterDiv prints" href="https://tanakajpeg.gumroad.com/l/lounging" alt="lounging person print">
+        <a class="product cart-button filterDiv prints" href="https://tanakajpeg.gumroad.com/l/lounging"
+            alt="lounging person print">
             <img src="images/shop/lounging-print.jpg">
             <span class="product_title">Lounging Matte Poster Print</span>
             <p>add to cart</p>
         </a>
-        <a class="product cart-button filterDiv prints" href="https://tanakajpeg.gumroad.com/l/resting" alt="small resting person">
+        <a class="product cart-button filterDiv prints" href="https://tanakajpeg.gumroad.com/l/resting"
+            alt="small resting person">
             <img src="images/shop/print_small_resting.jpg">
             <span class="product_title">Small Hand Drawn Print</span>
             <p>add to cart</p>
         </a>
-        <a class="product cart-button filterDiv prints" href="https://tanakajpeg.gumroad.com/l/sitting" alt="small sitting person">
+        <a class="product cart-button filterDiv prints" href="https://tanakajpeg.gumroad.com/l/sitting"
+            alt="small sitting person">
             <img src="images/shop/print_small_sitting.jpg">
             <span class="product_title">Small Hand Drawn Print</span>
             <p>add to cart</p>
         </a>
-        <a class="product cart-button filterDiv prints" href="https://tanakajpeg.gumroad.com/l/flowernude" alt="small flower person">
+        <a class="product cart-button filterDiv prints" href="https://tanakajpeg.gumroad.com/l/flowernude"
+            alt="small flower person">
             <img src="images/shop/print_small_flower.jpg">
             <span class="product_title">Small Hand Drawn Print</span>
-            <p>
-                add to
-                cart</p>
+            <p>add to cart</p>
         </a>
-       
         <a class="product cart-button filterDiv stationary" href="https://tanakajpeg.gumroad.com/l/bunnystickers"
             alt="runnin bunnin sticker sheet">
             <img src="images/shop/sticker_bun.jpg">
             <span class="product_title">Compostable Sticker Sheet</span>
-            <p>add
-                to cart</p>
+            <p>add to cart</p>
         </a>
-        
+        <a class="soldout product cart-button filterDiv paintings" href="#" alt="happy mushroom painting">
+            <img src="images/shop/paint_mushroom_2.jpg">
+            <span class="product_title">Painted Mushrooms</span>
+            <p>SOLD OUT</p>
+        </a>
     </div>
-    <footer>
+    <footer class="shop">
         <script src="general.js" defer></script>
-        <span>powered by: gumroad</span>
+        <span>powered by: <a href="https://tanakajpeg.gumroad.com/">gumroad</a></span>
     </footer>
 </body>
