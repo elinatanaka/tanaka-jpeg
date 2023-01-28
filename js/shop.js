@@ -41,19 +41,3 @@ for (var i = 0; i < btns.length; i++) {
     this.className += " active";
   });
 }
-
-// loader
-  //  $(window).load(function() {
-  //  $(".preloader").delay(1000).fadeOut("slow");
-  //  $("#overlayer").delay(1000).fadeOut("slow");
-  //  })
-
-  // $(window).on("DOMContentLoaded",function(){
-  //   $("#loadingscreen").fadeOut("slow");
-  // });
-
-// close modal
-const element = document.getElementById("myBtn");
-element.addEventListener("click", function() {
-  document.getElementById("demo").innerHTML = "Hello World";
-});
