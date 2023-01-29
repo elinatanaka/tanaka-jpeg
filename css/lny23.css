@@ -1,0 +1,205 @@
+@import url(fonts.css);
+
+:root {
+    --font-body-family: "mondwestregular", mono;
+    --font-accent: "VT323", monospace;
+    --font-body-plain-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-heading-family: 'Modern No. 20', "leikoregular", "blocusregular", Georgia, 'Times New Roman', Times, serif;
+    --color-bg-1: #EBE2D8;
+    --color-bg-2: #FFFFFF;
+    --color-bg-3: #FFD2C9;
+    --color-accent-1: #E04832;
+    --color-accent-2: #719F72;
+    --color-accent-3: #FFA201;
+    --color-accent-4: #9DC1E0;
+}
+
+body {
+    background-color: var(--color-bg-1);
+    font-family: var(--font-accent);
+    font-weight: 400;
+    color: var(--color-accent-1);
+}
+
+.intro h1 {
+    margin-left: 1em;
+}
+
+.backdrop {
+    background-image: url(../images/dressup-lny/LNY23_BG.png);
+    background-size: contain;
+    border: 2px solid var(--color-accent-4);
+    width: 30em;
+    height: 38em;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 4em;
+}
+
+.backdrop img#bunny {
+    width: 20em;
+    position: absolute;
+    right: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 17%;
+}
+
+.backdrop img#cat {
+    width: 23em;
+    position: absolute;
+    right: 0;
+    left: 46.5%;
+    transform: translateX(-50%);
+    top: 32.5%;
+}
+
+.togglebutton {
+    margin-top: -3em;
+    display: flex;
+    justify-content: end;
+}
+
+.togglebutton button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+}
+
+button img {
+    width: 2em !important;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: inline;
+    animation: smooth 1s ease;
+}
+
+@keyframes smooth {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.dressup {
+    position: absolute;
+    height: auto;
+    background-color: transparent;
+    cursor: grab;
+}
+
+#bow {
+    content: url("../images/dressup-lny/LNY23_mod_0000_Bow.png");
+    top: 10%;
+    left: 30%;
+    width: 8em;
+}
+
+#mousears {
+    content: url("../images/dressup-lny/LNY23_mod_0001_Mouse-Ears.png");
+    top: 10%;
+    left: 10%;
+    width: 11em;
+}
+
+#cape {
+    content: url("../images/dressup-lny/LNY23_mod_0002_Cape.png");
+    top: 20%;
+    width: 22.5em;
+}
+
+#persimmon {
+    content: url("../images/dressup-lny/LNY23_mod_0005_Persimmon.png");
+    width: 21.5em;
+    top: 20%;
+    left: 30%;
+}
+
+#ldhead {
+    content: url("../images/dressup-lny/LNY23_mod_0003_Lion-Dance-Head.png");
+    width: 23.5em;
+    top: 50%;
+}
+
+#ldpants {
+    content: url("../images/dressup-lny/LNY23_mod_0004_Lion-Dance-Pants.png");
+    width: 22.5em;
+    top: 57%;
+    left: 34%;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin: 1em;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--color-accent-1);
+}
+
+footer a:hover {
+    text-transform: uppercase;
+    color: #FFA201;
+}
+
+/* mobile shrink */
+@media screen and (max-width: 600px) {
+    .backdrop {
+        width: 20em;
+        height: 22em;
+        left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+margin-top: 9em;
+    }
+
+    .intro h1 {
+        margin: 1rem;
+      }
+
+    .backdrop img#cat {
+        width: 13em;
+        }
+
+        .backdrop img#bunny {
+            width: 11em;
+        }
+        #bow {
+            top: 32em;
+            width: 6em;
+        }
+        #mousears {
+            top: 32em;
+            width: 8em;
+        }
+        #cape {
+            width: 13.5em;
+            top: 33em;
+        }
+        #persimmon {
+            width: 13.5em;
+            top: 33em;
+        }
+        #ldhead {
+            width: 13.5em;
+            top: 40em;
+        }
+        #ldpants {
+            width: 13.5em;
+            top: 40em;
+        }
+        
+}

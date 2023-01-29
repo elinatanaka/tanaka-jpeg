@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e Tanaka</title>
+    <meta name="title" content="Lunar New Year Dressup Game (2023)">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="preload" as="style" onload="this.rel = 'stylesheet'" href='css/lny23.css'>
+    <meta name="description" content="A fun dress-up game to celebrate the new year of 2023 made by Elina Tanaka">
+    <meta property="og:title" content="LNY Dressup 2023">
+    <meta property="og:image" content="" href="images/dressup-lny/LNY23_mod_0008_Bunny.png">
+    <meta property="twitter:title" content="e Tanaka">
+    <meta property="twitter:description" content="e Tanaka's personal & professional creative endeavors">
+    <meta property="twitter:image" content="images/portfolio/paint_mountain.jpg">
+</head>
+</head>
+
+<body class="lny23">
+    <div class="intro">
+        <h1>Happy New Year! 新年快乐! Chúc Mừng Năm Mới!</h1>
+    </div>
+    <canvas id="canvas" class="canvas"></canvas>
+    <div class="dressup" id="bow"></div>
+    <div class="dressup" id="mousears"></div>
+    <div class="dressup" id="cape"></div>
+    <div class="dressup" id="persimmon"></div>
+    <div class="dressup" id="ldhead"></div>
+    <div class="dressup" id="ldpants"></div>
+    <div class="backdrop">
+        <div class="togglebutton">
+            <button class="buttonbun"><img src="./images/dressup-lny/LNY23_mod_0006_button_bun.png"></button>
+            <button class="buttoncat"><img src="./images/dressup-lny/LNY23_mod_0007_button_cat.png"></button>
+        </div>
+        <img id="bunny" class="show" src="./images/dressup-lny/LNY23_mod_0008_Bunny.png">
+        <img id="cat" class="hide" src="./images/dressup-lny/LNY23_mod_0009_Cat.png">
+    </div>
+
+    <script>
+var bunBtn = document.querySelector(".buttonbun");
+var bunImg = document.querySelector("#bunny");
+var catBtn = document.querySelector(".buttoncat");
+var catImg = document.querySelector("#cat");
+
+/* Hook up the event listeners */
+// Click events
+bunBtn.addEventListener("click", function hideCat() {
+	catImg.setAttribute("class", "hide");
+    bunImg.setAttribute("class", "show");
+});
+
+catBtn.addEventListener("click", function hideBun() {
+	bunImg.setAttribute("class", "hide");
+    catImg.setAttribute("class", "show");
+});
+
+
+        // dragging
+        divs = document.getElementsByClassName("dressup");
+        for (div of divs) div.onmousedown = onMouseDown;
+
+        document.onmousemove = onMouseMove;
+        document.onmouseup = onMouseUp;
+
+        canvas.width = window.innerWidth - 20;
+        canvas.height = window.innerHeight - 20;
+
+        var the_moving_div = '';
+        var the_last_mouse_position = {
+            x: 0,
+            y: 0
+        };
+
+        function onMouseDown(e) {
+            e.preventDefault();
+            the_moving_div = e.target.id; // remember which div has been selected
+            the_last_mouse_position.x = e.clientX; // remember where the mouse was when it was clicked
+            the_last_mouse_position.y = e.clientY;
+            e.target.style.cursor = "grabbing"; // highlight the border of the div
+
+            var divs = document.getElementsByClassName("dressup");
+            e.target.style.zIndex = divs.length; // put this div on top
+            var i = 1;
+            for (div of divs)
+                if (div.id != the_moving_div) div.style.zIndex = i++; // put all other divs behind the selected one
+        }
+
+        function onMouseMove(e) {
+            e.preventDefault();
+            if (the_moving_div == "") return;
+            var d = document.getElementById(the_moving_div);
+            d.style.left = d.offsetLeft + e.clientX - the_last_mouse_position.x +
+            "px"; // move the div by however much the moved
+            d.style.top = d.offsetTop + e.clientY - the_last_mouse_position.y + "px";
+            the_last_mouse_position.x = e.clientX; // remember where the mouse is now
+            the_last_mouse_position.y = e.clientY;
+        }
+
+        function onMouseUp(e) {
+            e.preventDefault();
+            if (the_moving_div == "") return;
+            document.getElementById(the_moving_div).style.cursor = "grab"; // hide the border again
+            the_moving_div = "";
+        }
+    </script>
+    <footer>
+        drawn and coded by <a href="index.html">elina tanaka</a>
+    </footer>
+</body>
+
+</html>
