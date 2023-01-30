@@ -1,73 +1,66 @@
 <!doctype html>
 <html>
-    <head>
-        <style>
-            div {
-            position: absolute;
-            top: 15%;
-            height: 60px;
-            width: 100px;
-            background: #15a5ed;
-            text-align: center;
-            line-height: 60px;
-            border-radius: 15px 15px 15px 15px;
-            }
 
-            #div1 {
-                background-image: url(./images/icons/ghost.svg);
-                background-color: transparent;
-                background-repeat: no-repeat;
-                top: 40%;
-            }
-        </style>
-    </head>
-    <body>
-        <canvas id="canvas" class="canvas"></canvas>
-        <div id="div1">Me</div>
-        <div id="div2">You</div>
-        <div id="div3">Us</div>
-        <div id="div4">Them</div>
-        <script>
-            divs = document.getElementsByTagName("div");
-            for (div of divs) div.onmousedown = onMouseDown;
-            
-            document.onmousemove = onMouseMove;
-            document.onmouseup   = onMouseUp;
-            
-            canvas.width = window.innerWidth - 20;
-            canvas.height = window.innerHeight - 20;
-            
-            var the_moving_div = ''; 
-            var the_last_mouse_position = { x:0, y:0 };
-            
-            function onMouseDown(e) {
-                e.preventDefault();
-                the_moving_div            = e.target.id;      // remember which div has been selected 
-                the_last_mouse_position.x = e.clientX;        // remember where the mouse was when it was clicked
-                the_last_mouse_position.y = e.clientY;
-                e.target.style.border = "2px solid blue";     // highlight the border of the div
-            
-                var divs = document.getElementsByTagName("div");
-                e.target.style.zIndex = divs.length;          // put this div  on top
-                var i = 1; for (div of divs) if (div.id != the_moving_div) div.style.zIndex = i++;   // put all other divs behind the selected one
-            }
-            
-            function onMouseMove(e) {
-                e.preventDefault();
-                if (the_moving_div == "") return;
-                var d = document.getElementById(the_moving_div);
-                d.style.left = d.offsetLeft + e.clientX - the_last_mouse_position.x + "px";     // move the div by however much the mouse moved
-                d.style.top  = d.offsetTop  + e.clientY - the_last_mouse_position.y + "px";
-                the_last_mouse_position.x = e.clientX;                                          // remember where the mouse is now
-                the_last_mouse_position.y = e.clientY;
-            }
-            
-            function onMouseUp(e) {
-                e.preventDefault();
-                if (the_moving_div == "") return;
-                document.getElementById(the_moving_div).style.border = "none";             // hide the border again
-                the_moving_div = "";
-            }
-        </script>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e Tanaka</title>
+    <meta name="title" content="Lunar New Year Dressup Game (2023)">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="preload" as="style" onload="this.rel = 'stylesheet'" href='css/lny23.css'>
+    <meta name="description" content="A fun dress-up game to celebrate the new year of 2023 made by Elina Tanaka">
+    <meta property="og:title" content="LNY Dressup 2023">
+    <meta property="og:image" content="" href="images/dressup-lny/LNY23_mod_0008_Bunny.png">
+    <meta property="twitter:title" content="e Tanaka">
+    <meta property="twitter:description" content="e Tanaka's personal & professional creative endeavors">
+    <meta property="twitter:image" content="images/portfolio/paint_mountain.jpg">
+</head>
+</head>
+
+<body class="lny23">
+    <div class="intro">
+        <h1>Happy New Year! 新年快乐! Chúc Mừng Năm Mới!</h1>
+    </div>
+    <canvas id="canvas" class="canvas"></canvas>
+    <div class="dressup hat" id="bow"></div>
+    <div class="dressup hat" id="mousears"></div>
+    <div class="dressup hat" id="ldhead"></div>
+    <div class="dressup body" id="cape"></div>
+    <div class="dressup body" id="persimmon"></div>
+    <div class="dressup body" id="ldpants"></div>
+    <div class="backdrop">
+        <div class="togglebutton">
+            <button class="buttonbun"><img src="./images/dressup-lny/LNY23_mod_0006_button_bun.png"></button>
+            <button class="buttoncat"><img src="./images/dressup-lny/LNY23_mod_0007_button_cat.png"></button>
+        </div>
+        <img id="bunny" class="show" src="./images/dressup-lny/LNY23_mod_0008_Bunny.png">
+        <img id="cat" class="hide" src="./images/dressup-lny/LNY23_mod_0009_Cat.png">
+    </div>
+
+    <script>
+var bunBtn = document.querySelector(".buttonbun");
+var bunImg = document.querySelector("#bunny");
+var catBtn = document.querySelector(".buttoncat");
+var catImg = document.querySelector("#cat");
+
+/* Hook up the event listeners */
+// Click events
+bunBtn.addEventListener("click", function hideCat() {
+	catImg.setAttribute("class", "hide");
+    bunImg.setAttribute("class", "show");
+});
+
+catBtn.addEventListener("click", function hideBun() {
+	bunImg.setAttribute("class", "hide");
+    catImg.setAttribute("class", "show");
+});
+
+
+    </script>
+    <footer>
+        drawn and coded by <a href="index.html">elina tanaka</a>
+    </footer>
+</body>
+
 </html>
