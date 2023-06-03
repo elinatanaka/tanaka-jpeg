@@ -170,9 +170,9 @@ b.work {
 }
 
 ul.work.row li.type {
-    max-width: 40em;
+    max-width: 30em;
     display: inline-block;
-    margin: 1rem;
+    margin: 2rem;
 }
 
 .workpage footer {
