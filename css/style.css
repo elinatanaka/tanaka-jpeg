@@ -1,17 +1,19 @@
 @import url(fonts.css);
 
 :root {
-    --font-body-family: "mondwestregular", mono;
+    --font-body-family: 'Satoshi-Regular', "mondwestregular", sans-serif;
     --font-accent: "VT323", monospace;
-    --font-body-plain-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    --font-heading-family: 'Modern No. 20', "leikoregular", "blocusregular", Georgia, 'Times New Roman', Times, serif;
-    --color-background: #3D4946;
+    --font-heading-family: 'Sligoil-Micro', Georgia, 'Times New Roman', Times, serif;
+    --color-background: #fffff;
+    --color-set-a-1: #251D10;
+    --color-set-a-2: #3C742C;
+    --color-set-a-3: #A090FF;
+    --color-set-a-4: #F8E201;
+
     --color-accent-1: #B9B26F;
     --color-accent-2: #C9CCD4;
     --color-accent-3: #F2EEEA;
-    --color-set-a-1: #849D9B;
-    --color-set-a-2: #1E2125;
-    --color-set-a-3: #D642EE;
+
     --color-set-b-1: #556169;
     --color-set-b-2: #B9B26F;
     --color-set-b-3: #EDFD34;
@@ -26,25 +28,32 @@ body {
 
 h1 {
     font-family: var(--font-heading-family);
-    color: var(--color-accent-1);
-    font-weight: 100;
-    font-size: 6rem;
+    color: var(--color-set-a-1);
+    font-weight: 400;
+    font-size: min(max(3rem, calc(3rem + ((1vw - 0.234375rem) * 8.5333))), 6.8rem);
+    min-height: 0vw;
     margin-bottom: 0;
+}
+
+h2 {
+    font-family: var(--font-heading-family);
+    font-size: min(max(2rem, calc(2rem + ((1vw - 0.234375rem) * 8.5333))), 4rem);
+    min-height: 0vw;
 }
 
 body,
 p {
     font-family: var(--font-body-family);
-    color: var(--color-accent-1);
+    color: var(--color-set-a-1);
 }
 
 a {
-    color: var(--color-accent-1);
+    color: var(--color-set-a-1);
     text-decoration: none;
 }
 
 a:hover {
-    color: var(--color-accent-2);
+    color: var(--color-set-a-2);
 }
 
 .home {
@@ -103,16 +112,20 @@ ul.home-nav {
     font-size: 3rem;
 }
 
+ul.home-nav li:hover {
+    list-style-image: url(../images/icons/ghost_green.svg);
+}
+
 ul.home-nav li {
     line-height: 0.5em;
     margin-bottom: 1.5rem;
 }
 
-ul.home-nav .small {
+.home .small {
     text-transform: uppercase;
-font-size: 1.5rem;
-font-weight: 300;
-letter-spacing: 0.157rem;
+    font-size: 1rem;
+    font-weight: 300;
+    letter-spacing: 0.157rem;
 }
 
 @media screen and (max-width: 669px) {
@@ -132,19 +145,20 @@ letter-spacing: 0.157rem;
 /* workpage */
 .workpage {
     margin: 0;
-    color: var(--color-set-c-1);
+    color: var(--color-set-a-2);
 }
 
 .workpage p,
 .workpage a {
-    color: var(--color-set-c-1);
+    color: var(--color-set-a-2);
 }
 
 .workpage a:hover {
-    color: var(--color-set-c-3);
+    color: var(--color-set-a-4);
 }
 
 .workpage h2 {
+    font-family: var(--font-heading-family);
     text-transform: uppercase;
     font-size: 3rem;
     padding-left: 10px;
@@ -163,15 +177,23 @@ b.work {
     font-size: 1.3rem;
 }
 
+.work strong {
+    font-weight: 200;
+    letter-spacing: 0.082em;
+    text-transform: uppercase;
+    font-size: 0.688em;
+}
+
 .hover_img a:hover span {
     display: block;
     position: absolute;
-    transform: translateY(-120%);
+    transform: translate(50%, -50%);
+    ;
 }
 
 ul.work.row li.type {
     max-width: 30em;
-    display: inline-block;
+    display: inline-grid;
     margin: 2rem;
 }
 
@@ -233,18 +255,30 @@ nav ul {
     text-align: center;
 }
 
+.shopcontainer {
+    display: flex;
+}
+
 /* filtering */
 .filter {
     display: flex;
+    width: 11em;
+    flex-direction: column;
+    flex-shrink: 0;
+    border: 1px dashed black;
+    height: 100%;
+    padding: 1em 0;
+    margin: .5rem;
+    position: sticky;
+    top: 1em;
 }
 
 .filter button {
     font-family: var(--font-body-family);
-    text-transform: uppercase;
     background: none;
-    color: var(--color-accent-1);
-    border: 1px dashed var(--color-accent-1);
-    width: 100%;
+    color: var(--color-set-a-1);
+    border: none;
+    width: auto;
     margin: 0;
     padding: .4rem 0;
     overflow: hidden;
@@ -270,15 +304,12 @@ nav ul {
 
 @keyframes smooth {
     from {
-      opacity: 0;
+        opacity: 0;
     }
-    to {
-      opacity: 1;
-    }
-}
 
-.filter button:hover {
-    background-color: var(--color-set-b-1);
+    to {
+        opacity: 1;
+    }
 }
 
 /* 
@@ -321,7 +352,7 @@ filter marquee effect */
     align-self: center;
     display: inline-flex;
     background-color: var(--color-background);
-    border: 1px solid var(--color-accent-1);
+    border: 1px solid var(--color-set-a-1);
     padding: 1em;
     text-transform: uppercase;
     font-family: var(--font-body-family);
@@ -330,7 +361,7 @@ filter marquee effect */
 a.product .product_title:hover,
 .product a:hover,
 a.product:hover span {
-    color: var(--color-accent-1) !important;
+    color: var(--color-set-c-3) !important;
 }
 
 .soldout.product.cart-button:hover p {
@@ -342,10 +373,11 @@ a.product:hover span {
 }
 
 .product.cart-button:hover p {
-    color: var(--color-background);
-    background-color: var(--color-accent-1);
+    color: var(--color-set-b-3);
+    background-color: var(--color-set-c-3);
     transform: translate(-.25rem, -.25rem);
-    box-shadow: .25rem .25rem var(--color-set-a-2);
+    box-shadow: .25rem .25rem var(--color-set-c-2);
+    border: 1px solid var(--color-set-b-3);
 }
 
 #ProductIframePage-react-component-6994e5d4-91ce-4ef3-9df0-beb2fc7c9b29 main {
