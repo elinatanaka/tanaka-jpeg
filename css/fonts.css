@@ -1,6 +1,80 @@
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
 @font-face {
+    font-family: 'Sligoil-Micro';
+    src: url("../fonts/Sligoil-Micro.otf") format("truetype"),
+        url('../fonts/Sligoil-Micro.woff') format('woff'),
+        url("../fonts/Sligoil-Micro.woff2") format('woff2');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Satoshi-Variable';
+    src: url('../fonts/Satoshi-Variable.woff2') format('woff2'),
+        url('../fonts/Satoshi-Variable.woff') format('woff'),
+        url('../fonts/Satoshi-Variable.ttf') format('truetype');
+    font-weight: 300 900;
+    font-display: swap;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Satoshi-Light';
+    src: url('../fonts/Satoshi-Light.woff2') format('woff2'),
+        url('../fonts/Satoshi-Light.woff') format('woff'),
+        url('../fonts/Satoshi-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-display: swap;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Satoshi-Regular';
+    src: url('../fonts/Satoshi-Regular.woff2') format('woff2'),
+        url('../fonts/Satoshi-Regular.woff') format('woff'),
+        url('../fonts/Satoshi-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Satoshi-Medium';
+    src: url('../fonts/Satoshi-Medium.woff2') format('woff2'),
+        url('../fonts/Satoshi-Medium.woff') format('woff'),
+        url('../fonts/Satoshi-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-display: swap;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Satoshi-Bold';
+    src: url('../fonts/Satoshi-Bold.woff2') format('woff2'),
+        url('../fonts/Satoshi-Bold.woff') format('woff'),
+        url('../fonts/Satoshi-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-display: swap;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Satoshi-Black';
+    src: url('../fonts/Satoshi-Black.woff2') format('woff2'),
+        url('../fonts/Satoshi-Black.woff') format('woff'),
+        url('../fonts/Satoshi-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-display: swap;
+    font-style: normal;
+}
+
+
+@font-face {
     font-family: "Le Murmure";
     src: url('../fonts/Le_Murmure-Regular_web.woff2') format('woff2'),
         url('../fonts/Le_Murmure-Regular_web.woff') format('woff');
@@ -20,9 +94,9 @@
     font-family: 'blocusregular';
     src: url('../fonts/blocuswebfont.eot');
     src: url('../fonts/blocuswebfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/blocuswebfont.woff') format('woff'),
-         url('../fonts/blocuswebfont.ttf') format('truetype'),
-         url('../fonts/blocuswebfont.svg#blocusregular') format('svg');
+        url('../fonts/blocuswebfont.woff') format('woff'),
+        url('../fonts/blocuswebfont.ttf') format('truetype'),
+        url('../fonts/blocuswebfont.svg#blocusregular') format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -31,8 +105,8 @@
 @font-face {
     font-family: 'leikoregular';
     src: url('../fonts/leiko-regular-webfont.woff2') format('woff2'),
-         url('../fonts/leiko-regular-webfont.woff') format('woff'),
-         url('../fonts/Leiko-Regular.otf') format('truetype');
+        url('../fonts/leiko-regular-webfont.woff') format('woff'),
+        url('../fonts/Leiko-Regular.otf') format('truetype');
     font-weight: normal;
     font-style: normal;
 
@@ -41,7 +115,7 @@
 @font-face {
     font-family: 'mondwestregular';
     src: url('../fonts/mondwest-regular-webfont.woff2') format('woff2'),
-         url('../fonts/mondwest-regular-webfont.woff') format('woff');
+        url('../fonts/mondwest-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
