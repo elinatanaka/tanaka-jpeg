@@ -188,7 +188,10 @@ b.work {
     display: block;
     position: absolute;
     transform: translate(50%, -50%);
-    ;
+}
+
+.hover_img a:hover span img {
+    box-shadow: 10px 14px 15px 0px var(--color-set-a-3);
 }
 
 ul.work.row li.type {
