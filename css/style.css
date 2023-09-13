@@ -416,3 +416,9 @@ footer.shop a:hover {
     font-size: 2em;
     padding: 1rem;
 }
+
+/* keep on bottom */
+html {
+	visibility: visible;
+	opacity: 1;
+}
